@@ -13,4 +13,4 @@ INSERT INTO employee VALUES
 (1, 'Jhon', 1000),
 (2, 'Diana', 2000),
 (3, 'Andres', 3000),
-(4, 'Camilo', 4000),
+(4, 'Camilo', 4000)
