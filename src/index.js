@@ -1,22 +1,6 @@
-import express from 'express';
-import employeesRoutes from './routes/employees.routes.js';
-import indexRoutes from './routes/index.routes.js';
+import app from './app.js';
+import { PORT } from './config.js';
 
-const app = express()
+app.listen(PORT);
 
-app.use(express.json()); 
-
-
-app.use(indexRoutes);
-app.use('/api',employeesRoutes);
-
-app.use((req, res, next) => {
-    res.status(404).json({
-        message: 'endpoint not found'
-    })    
-})
-
-
-app.listen(3000);
-
-console.log('el servidor esta corriendo en el puerto 3000');
+console.log('el servidor esta corriendo en el puerto ', PORT);
